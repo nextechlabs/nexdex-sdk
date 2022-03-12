@@ -1,17 +1,17 @@
 {
-  "name": "@pancakeswap/sdk",
+  "name": "@nextechlabs/nexdex-sdk",
   "license": "MIT",
-  "version": "2.4.0",
-  "description": "🛠 An SDK for building applications on top of Pancakeswap.",
+  "version": "0.1.5",
+  "description": "🛠 An SDK for building applications on top of TheNex.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/pancakeswap/pancake-swap-sdk.git",
+  "repository": "https://github.com/nextechlabs/nexdex-sdk.git",
   "keywords": [
-    "pancakeswap",
-    "bsc"
+    "nexdex",
+    "harmony"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "prepublishOnly": "tsdx build"
   },
   "dependencies": {
-    "@pancakeswap-libs/pancake-swap-core": "^0.1.0",
+    "@nextechlabs/nexdex-core": "^0.1.1",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.1",
