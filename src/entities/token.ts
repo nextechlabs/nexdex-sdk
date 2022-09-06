@@ -82,20 +82,20 @@ export const WETH = {
     'Wrapped AVAX',
     'https://www.avax.network/'
   ),
-  [ChainId.POLYGON_MAINNET]: new Token(
-    ChainId.POLYGON_MAINNET,
-    '0xa24D403B17A120392dC4B512867B7D4810A7e211',
-    18,
-    'WMATIC',
-    'Wrapped MATIC',
-    'https://www.avax.network/'
-  ),
-  [ChainId.POLYGON_TESTNET]: new Token(
-    ChainId.POLYGON_TESTNET,
-    '0xa24D403B17A120392dC4B512867B7D4810A7e211',
-    18,
-    'WMATIC',
-    'Wrapped MATIC',
-    'https://www.avax.network/'
-  )
+  // [ChainId.POLYGON_MAINNET]: new Token(
+  //   ChainId.POLYGON_MAINNET,
+  //   '0xa24D403B17A120392dC4B512867B7D4810A7e211',
+  //   18,
+  //   'WMATIC',
+  //   'Wrapped MATIC',
+  //   'https://www.avax.network/'
+  // ),
+  // [ChainId.POLYGON_TESTNET]: new Token(
+  //   ChainId.POLYGON_TESTNET,
+  //   '0xa24D403B17A120392dC4B512867B7D4810A7e211',
+  //   18,
+  //   'WMATIC',
+  //   'Wrapped MATIC',
+  //   'https://www.avax.network/'
+  // )
 }
