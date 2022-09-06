@@ -66,20 +66,36 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 }
 
 export const WETH = {
-  [ChainId.MAINNET]: new Token(
-    ChainId.MAINNET,
-    '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
+  [ChainId.AVALANCHE_MAINNET]: new Token(
+    ChainId.AVALANCHE_MAINNET,
+    '0xa24D403B17A120392dC4B512867B7D4810A7e211',
     18,
-    'WONE',
-    'Wrapped ONE',
-    'https://www.binance.org'
+    'WAVAX',
+    'Wrapped AVAX',
+    'https://www.avax.network/'
   ),
-  [ChainId.TESTNET]: new Token(
-    ChainId.TESTNET,
-    '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
+  [ChainId.AVALANCHE_TESTNET]: new Token(
+    ChainId.AVALANCHE_TESTNET,
+    '0xc865fD97b266f0aAEAd6A69381D2E9D049Daf2Cd',
     18,
-    'WONE',
-    'Wrapped ONE',
-    'https://www.binance.org'
+    'WAVAX',
+    'Wrapped AVAX',
+    'https://www.avax.network/'
+  ),
+  [ChainId.POLYGON_MAINNET]: new Token(
+    ChainId.POLYGON_MAINNET,
+    '0xa24D403B17A120392dC4B512867B7D4810A7e211',
+    18,
+    'WMATIC',
+    'Wrapped MATIC',
+    'https://www.avax.network/'
+  ),
+  [ChainId.POLYGON_TESTNET]: new Token(
+    ChainId.POLYGON_TESTNET,
+    '0xa24D403B17A120392dC4B512867B7D4810A7e211',
+    18,
+    'WMATIC',
+    'Wrapped MATIC',
+    'https://www.avax.network/'
   )
 }

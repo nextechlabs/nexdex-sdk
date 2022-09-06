@@ -2,7 +2,7 @@ Arguments:
   /home/j/.nvm/versions/node/v17.3.0/bin/node /usr/local/bin/yarn
 
 PATH: 
-  /home/j/.nvm/versions/node/v17.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/bin:/mnt/c/Users/Jon/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Jon/AppData/Local/atom/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Jon/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Jon/AppData/Roaming/npm:/mnt/c/Users/Jon/.dotnet/tools:/mnt/c/Windows/System32:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/Jon/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Jon/AppData/Local/atom/bin:/mnt/c/Users/Jon/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Jon/.dotnet/tools:/mnt/c/Users/Jon/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Nmap:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Jon/AppData/Local/atom/bin:/mnt/c/Users/Jon/AppData/Roaming/npm:/snap/bin
+  /home/j/.nvm/versions/node/v17.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/bin:/mnt/c/Users/Jon/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Jon/AppData/Local/atom/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Jon/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Jon/AppData/Roaming/npm:/mnt/c/Users/Jon/.dotnet/tools:/mnt/c/Windows/System32:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Jon/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Jon/AppData/Local/atom/bin:/mnt/c/Users/Jon/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Jon/.dotnet/tools:/mnt/c/Users/Jon/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Nmap:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Jon/AppData/Local/atom/bin:/mnt/c/Users/Jon/AppData/Roaming/npm:/snap/bin
 
 Yarn version: 
   1.22.10
@@ -14,33 +14,31 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.npmjs.org/@nextechlabs/nexdex-core/-/nexdex-core-0.1.0.tgz: Request failed "404 Not Found"
-      at ResponseError.ExtendableBuiltin (/usr/local/lib/node_modules/yarn/lib/cli.js:696:66)
-      at new ResponseError (/usr/local/lib/node_modules/yarn/lib/cli.js:802:124)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:67058:16)
-      at Request.emit (node:events:390:28)
-      at Request.module.exports.Request.onRequestResponse (/usr/local/lib/node_modules/yarn/lib/cli.js:141539:10)
-      at ClientRequest.emit (node:events:390:28)
-      at HTTPParser.parserOnIncomingClient (node:_http_client:618:27)
-      at HTTPParser.parserOnHeadersComplete (node:_http_common:128:17)
-      at TLSSocket.socketOnData (node:_http_client:482:22)
-      at TLSSocket.emit (node:events:390:28)
+  Error: Failed to replace env in config: ${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}
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:98430:13
+      at String.replace (<anonymous>)
+      at envReplace (/usr/local/lib/node_modules/yarn/lib/cli.js:98425:16)
+      at Function.normalizeConfig (/usr/local/lib/node_modules/yarn/lib/cli.js:31887:69)
+      at NpmRegistry.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:31917:34)
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
-    "name": "@nextechlabs/nexdex-sdk",
+    "name": "@thenexlabs/nex-sdk",
     "license": "MIT",
-    "version": "2.4.0",
-    "description": "🛠 An SDK for building applications on top of NexDex.",
+    "version": "0.0.1",
+    "description": "🛠 An SDK for building applications on top of TheNex.",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
       "dist"
     ],
-    "repository": "https://github.com/nextechlabs/nexdex-swap-sdk.git",
+    "repository": "https://github.com/thenexlabs/nex-sdk.git",
     "keywords": [
-      "pancakeswap",
-      "bsc"
+      "nexdex",
+      "harmony"
     ],
     "module": "dist/sdk.esm.js",
     "scripts": {
@@ -51,7 +49,7 @@ npm manifest:
       "prepublishOnly": "tsdx build"
     },
     "dependencies": {
-      "@nextechlabs/nexdex-core": "^0.1.0",
+      "@thenexlabs/nex-core": "^0.1.1",
       "big.js": "^5.2.2",
       "decimal.js-light": "^2.5.0",
       "jsbi": "^3.1.1",
@@ -1875,6 +1873,15 @@ Lockfile:
     "resolved" "https://registry.npmjs.org/@multiformats/base-x/-/base-x-4.0.1.tgz"
     "version" "4.0.1"
   
+  "@thenexlabs/nex-core@^0.1.1":
+    "integrity" "sha512-W5B4PDAiEgv+ULJUPtP6ZlAlYYIW+lU8qz1sILL82RoCjprFCglR77KOS9qoPb7KDUiE/DgDst1H6KAO6Y6l3Q=="
+    "resolved" "https://npm.pkg.github.com/download/@thenexlabs/nex-core/0.1.1/38102a34396b36ac9c85d32fe7cc4eeefb419a9bd59becba1bff44ac2c94ad01"
+    "version" "0.1.1"
+    dependencies:
+      "truffle" "^5.1.41"
+      "truffle-flattener" "^1.4.4"
+      "truffle-hdwallet-provider" "^1.0.17"
+  
   "@nodefactory/filsnap-adapter@^0.2.1":
     "integrity" "sha512-nbaYMwVopOXN2bWOdDY3il6gGL9qMuCmMN4WPuoxzJjSnAMJNqEeSe6MNNJ/fYBLipZcJfAtirNXRrFLFN+Tvw=="
     "resolved" "https://registry.npmjs.org/@nodefactory/filsnap-adapter/-/filsnap-adapter-0.2.2.tgz"
@@ -1905,15 +1912,6 @@ Lockfile:
     dependencies:
       "@nodelib/fs.scandir" "2.1.4"
       "fastq" "^1.6.0"
-  
-  "@nextechlabs/nexdex-core@^0.1.0":
-    "integrity" "sha512-2jYiD1Ec3xAbP4JTa/Ozylx0xI4VwC7diCm5ak4AtGrIRhfRLSanaZSQdVpLigUnIFszma/4nVWtt3cup4Poxw=="
-    "resolved" "https://registry.npmjs.org/@nextechlabs/nexdex-core/-/nexdex-core-0.1.0.tgz"
-    "version" "0.1.0"
-    dependencies:
-      "truffle" "^5.1.41"
-      "truffle-flattener" "^1.4.4"
-      "truffle-hdwallet-provider" "^1.0.17"
   
   "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
     "integrity" "sha1-m4sMxmPWaafY9vXQiToU00jzD78="

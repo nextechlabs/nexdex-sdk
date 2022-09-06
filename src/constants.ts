@@ -4,9 +4,16 @@ import JSBI from 'jsbi'
 export type BigintIsh = JSBI | bigint | string
 
 export enum ChainId {
-  MAINNET = 1666600000,
-  TESTNET = 1666700000
+  AVALANCHE_MAINNET = 43114,
+  AVALANCHE_TESTNET = 43113,
+  // POLYGON_MAINNET = 137,
+  // POLYGON_TESTNET = 80001
 }
+
+// avalanche mainnet: 43114
+// avalanche testnet: 43113
+// harmony mainnet: 1666600000
+// harmont testnet: 1666700000
 
 export enum TradeType {
   EXACT_INPUT,
@@ -19,15 +26,20 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x0Ed44D242488F4800EF2F543bE6d200D1E0732C5'
-
-export const INIT_CODE_HASH = '0xa89d9fe4b53cc67a266976e7e46d342a9a9654b4680a3e9a3daa4c0a761cc053'
+export const FACTORY_ADDRESS = {
+  [ChainId.AVALANCHE_MAINNET]: '',
+  [ChainId.AVALANCHE_TESTNET]: '0x492210b0f7AC2532083b006f02ECB625FA170E74'
+}
+export const INIT_CODE_HASH = {
+  [ChainId.AVALANCHE_MAINNET]: '',
+  [ChainId.AVALANCHE_TESTNET]: '0x6a12ab4125eed84546894a598967dbe79365b37826ae55e64454875b6905a3e1'
+}
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
 // exports for internal consumption
 export const ZERO = JSBI.BigInt(0)
-export const ONE = JSBI.BigInt(1)
+export const AVAX = JSBI.BigInt(1)
 export const TWO = JSBI.BigInt(2)
 export const THREE = JSBI.BigInt(3)
 export const FIVE = JSBI.BigInt(5)

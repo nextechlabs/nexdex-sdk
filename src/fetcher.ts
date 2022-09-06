@@ -3,14 +3,17 @@ import { getNetwork } from '@ethersproject/networks'
 import { getDefaultProvider } from '@ethersproject/providers'
 import { TokenAmount } from './entities/fractions/tokenAmount'
 import { Pair } from './entities/pair'
-import INexDexPair from '@nextechlabs/nexdex-core/build/INexDexPair.json'
+import INexDexPair from '@thenexlabs/nex-core/build/INexDexPair.json'
 import invariant from 'tiny-invariant'
 import ERC20 from './abis/ERC20.json'
 import { ChainId } from './constants'
 import { Token } from './entities/token'
 
 let TOKEN_DECIMALS_CACHE: { [chainId: number]: { [address: string]: number } } = {
-  [ChainId.MAINNET]: {
+  [ChainId.AVALANCHE_MAINNET]: {
+    '0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A': 9 // DGD
+  },
+  [ChainId.POLYGON_MAINNET]: {
     '0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A': 9 // DGD
   }
 }

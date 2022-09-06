@@ -1,17 +1,25 @@
 {
-  "name": "@nextechlabs/nexdex-sdk",
+  "name": "@thenexlabs/sdk",
   "license": "MIT",
-  "version": "0.1.5",
+  "version": "0.0.8",
   "description": "🛠 An SDK for building applications on top of TheNex.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/nextechlabs/nexdex-sdk.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thenexlabs/nex-sdk.git"
+  },
   "keywords": [
-    "nexdex",
-    "harmony"
+    "thenex",
+    "the nex",
+    "sdk"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
@@ -22,7 +30,7 @@
     "prepublishOnly": "tsdx build"
   },
   "dependencies": {
-    "@nextechlabs/nexdex-core": "^0.1.1",
+    "@thenexlabs/nex-core": "^0.0.1",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.1",

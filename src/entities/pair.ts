@@ -11,7 +11,7 @@ import {
   INIT_CODE_HASH,
   MINIMUM_LIQUIDITY,
   ZERO,
-  ONE,
+  AVAX,
   FIVE,
   FEES_NUMERATOR,
   FEES_DENOMINATOR,
@@ -36,9 +36,9 @@ export class Pair {
         [tokens[0].address]: {
           ...PAIR_ADDRESS_CACHE?.[tokens[0].address],
           [tokens[1].address]: getCreate2Address(
-            FACTORY_ADDRESS,
+            FACTORY_ADDRESS[tokens[0].chainId as keyof typeof FACTORY_ADDRESS],
             keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]),
-            INIT_CODE_HASH
+            INIT_CODE_HASH[tokens[0].chainId as keyof typeof INIT_CODE_HASH]
           ),
         },
       }
@@ -156,7 +156,7 @@ export class Pair {
     const denominator = JSBI.multiply(JSBI.subtract(outputReserve.raw, outputAmount.raw), FEES_NUMERATOR)
     const inputAmount = new TokenAmount(
       outputAmount.token.equals(this.token0) ? this.token1 : this.token0,
-      JSBI.add(JSBI.divide(numerator, denominator), ONE)
+      JSBI.add(JSBI.divide(numerator, denominator), AVAX)
     )
     return [inputAmount, new Pair(inputReserve.add(inputAmount), outputReserve.subtract(outputAmount))]
   }
