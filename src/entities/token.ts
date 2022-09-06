@@ -68,7 +68,7 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 export const WETH = {
   [ChainId.AVALANCHE_MAINNET]: new Token(
     ChainId.AVALANCHE_MAINNET,
-    '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7',
+    '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
     18,
     'WAVAX',
     'Wrapped AVAX',
